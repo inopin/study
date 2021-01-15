@@ -12,7 +12,7 @@ inputRub.addEventListener('input', () => {
         if (request.readyState === 4 && request.status === 200) {
             console.log(request.response);
             const data = JSON.parse(request.response);
-            inputUsd.value = +inputRub / data.current.usd;
+            inputUsd.value = +inputRub.value / data.current.usd;
         } else {
             inputUsd.value = "Что то пошло не так";
         }
